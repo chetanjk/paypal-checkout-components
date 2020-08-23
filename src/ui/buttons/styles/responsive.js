@@ -4,7 +4,7 @@ import { max, perc } from 'belter/src';
 import { FUNDING } from '@paypal/sdk-constants/src';
 
 import { BUTTON_SHAPE, BUTTON_LAYOUT, BUTTON_NUMBER, CLASS, ATTRIBUTE } from '../../../constants';
-import { BUTTON_SIZE_STYLE, BUTTON_RELATIVE_STYLE } from '../config';
+import { BUTTON_SIZE_STYLE, BUTTON_RELATIVE_STYLE, BUTTON_ERROR_STYLE } from '../config';
 
 const BUTTON_MIN_ASPECT_RATIO = 2.2;
 const MIN_SPLIT_BUTTON_WIDTH = 300;
@@ -47,6 +47,14 @@ export function buttonResponsiveStyle({ height } : {| height? : ?number |}) : st
                     display: inline-block;
                     text-align: center;
                     height: 100%;
+                }
+
+                .${ CLASS.BUTTON_ROW }.${ CLASS.LAYOUT }-${ BUTTON_LAYOUT.VERTICAL }.${ CLASS.BUTTON_HAS_ERROR } {
+                    margin-bottom: ${ perc(buttonHeight, BUTTON_RELATIVE_STYLE.VERTICAL_MARGIN) + BUTTON_ERROR_STYLE.ADDITIONAL_MARGIN }px;
+                }
+                
+                .${ CLASS.BUTTON_HAS_ERROR } .${ CLASS.ERROR_MESSAGE } {
+                    top: ${ buttonHeight + 5 }px;
                 }
                 
                 .${ CLASS.BUTTON } .${ CLASS.SPINNER } {

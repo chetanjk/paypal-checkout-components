@@ -10,6 +10,7 @@ import { noop, preventClickFocus, isBrowser, isElement } from 'belter/src';
 import type { ContentType, Wallet, WalletInstrument, Experiment } from '../../types';
 import { ATTRIBUTE, CLASS, BUTTON_COLOR, BUTTON_NUMBER, TEXT_COLOR } from '../../constants';
 import { getFundingConfig, isVaultedFundingEligible } from '../../funding';
+import { ErrorIcon } from '../errorIcon';
 
 import type { ButtonStyle, Personalization, OnShippingChange } from './props';
 import { Spinner } from './spinner';
@@ -204,6 +205,11 @@ export function Button({ fundingSource, style, multiple, locale, env, fundingEli
             </div>
 
             { showMenu ? <MenuButton color={ textColor } /> : null }
+
+            <div class={ CLASS.ERROR_MESSAGE }>
+                <ErrorIcon />
+                Looks like something went wrong. Please try again.
+            </div>
         </div>
     );
 }

@@ -38,6 +38,35 @@ export const buttonStyle = `
     .${ CLASS.BUTTON } * {
         cursor: pointer;
     }
+    
+    .${ CLASS.BUTTON_ROW } {
+        position: relative;
+    }
+
+    .${ CLASS.BUTTON_HAS_ERROR } {
+        overflow: visible;
+    }
+
+    .${ CLASS.BUTTON_ROW } .${ CLASS.ERROR_MESSAGE } {
+        display: none;
+        font-size: 13px;
+        position: absolute;
+        width: 100%;
+        font-weight: normal;
+        color: #cc0000;
+        pointer-events: none;
+        text-align: left;
+    }
+
+    .${ CLASS.BUTTON_ROW } .${ CLASS.ERROR_MESSAGE } img {
+        width: 17px;
+        margin-right: 4px;
+        vertical-align: bottom;
+    }
+
+    .${ CLASS.BUTTON_ROW }.${ CLASS.BUTTON_HAS_ERROR } .${ CLASS.ERROR_MESSAGE } {
+        display: block;
+    }
 
     .${ CLASS.CONTAINER }.${ CLASS.ENV }-${ ENV.TEST } .${ CLASS.TEXT } {
         font-family: Arial !important;

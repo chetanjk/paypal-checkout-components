@@ -22,6 +22,9 @@ export const CLASS = {
     TAGLINE:    ('paypal-button-tagline' : 'paypal-button-tagline'),
     POWERED_BY: ('paypal-powered-by' : 'paypal-powered-by'),
 
+    BUTTON_HAS_ERROR: ('paypal-button-has-error' : 'paypal-button-has-error'),
+    ERROR_MESSAGE:    ('error-message' : 'error-message'),
+
     TEXT:  ('paypal-button-text' : 'paypal-button-text'),
     SPACE: ('paypal-button-space' : 'paypal-button-space'),
     CARD:  ('paypal-button-card' : 'paypal-button-card'),

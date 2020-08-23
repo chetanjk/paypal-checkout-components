@@ -18,6 +18,10 @@ export const BUTTON_RELATIVE_STYLE = {
     VERTICAL_MARGIN: 30
 };
 
+export const BUTTON_ERROR_STYLE = {
+    ADDITIONAL_MARGIN: 20
+};
+
 type ButtonStyleMap = {
     [ $Values<typeof BUTTON_SIZE> ] : {|
         defaultWidth : number,
