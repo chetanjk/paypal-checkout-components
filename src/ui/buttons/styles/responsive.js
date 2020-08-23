@@ -48,7 +48,7 @@ export function buttonResponsiveStyle({ height } : {| height? : ?number |}) : st
                     text-align: center;
                     height: 100%;
                 }
-                
+
                 .${ CLASS.BUTTON } .${ CLASS.SPINNER } {
                     height: ${ perc(buttonHeight, 50) }px;
                     width: ${ perc(buttonHeight, 50) }px;
